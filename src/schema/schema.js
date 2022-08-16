@@ -24,11 +24,14 @@ const typeDefs = gql`
     address: String
     phone: String
     products: [Product]
+    status: Int
+    shipDate: Int
   }
 
   type Query {
     getUserOrders(userId: String): [Order]
     getOrder(id: ID): Order
+    getAllOrders: [Order]
   }
 
   type Mutation {
@@ -38,6 +41,8 @@ const typeDefs = gql`
       phone: String
       products: [ProductInput]
     ): Order
+
+    approveOrder(id: ID): Order
   }
 `;
 

@@ -8,6 +8,8 @@ const Order = new Schema(
     address: { type: String },
     phone: { type: String },
     products: { type: Array },
+    status: { type: Number },
+    shipDate: { type: Number },
   },
   { collection: "order" }
 );
